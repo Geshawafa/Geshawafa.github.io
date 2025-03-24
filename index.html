@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MirthGrove - 7 Days to Die Community</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="blossomCanvas"></canvas>
+    <div class="gradient-bg"></div>
+    
+    <nav class="navbar" data-aos="fade-down">
+        <div class="container">
+            <div class="logo">
+                <img src="images/cherry-blossom.png" alt="Logo">
+                <span>MirthGrove</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#servers" class="nav-link">Servers</a>
+                <a href="#transfer" class="nav-link">Transfer</a>
+                <a href="#donate" class="nav-link">Donate</a>
+                <a href="https://discord.gg/your-invite" class="discord-link" target="_blank">
+                    <i class="fab fa-discord"></i> Discord
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-aos="zoom-in-up" data-aos-delay="100">Welcome to MirthGrove</h1>
+            <p data-aos="fade-up" data-aos-delay="300">A Chill PvE Community</p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="500">
+                <a href="https://discord.gg/your-invite" class="discord-btn" target="_blank">
+                    <i class="fab fa-discord"></i> Join Our Discord
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <section id="servers" class="server-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Our Servers</h2>
+            <div class="server-grid">
+                <div class="server-card" data-aos="flip-left">
+                    <img src="images/map1.jpg" alt="Wrath Infuser" class="parallax-img">
+                    <h3>Wrath Infuser</h3>
+                    <p>IP: play.mirthgrove.com:26105</p>
+                    <button onclick="copyIP('play.mirthgrove.com:26105')">Copy IP</button>
+                </div>
+                <div class="server-card" data-aos="flip-right">
+                    <img src="images/map2.jpg" alt="Protected Lands" class="parallax-img">
+                    <h3>Protected Lands</h3>
+                    <p>IP: play.mirthgrove.com:26800</p>
+                    <button onclick="copyIP('play.mirthgrove.com:26800')">Copy IP</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transfer" class="guide-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Character Transfer</h2>
+            <div class="transfer-steps">
+                <div class="step" data-aos="zoom-in">
+                    <div class="step-icon"><i class="fas fa-cloud-download-alt"></i></div>
+                    <h3>Visit Portal</h3>
+                    <p>Access our transfer website</p>
+                </div>
+                <div class="step" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="step-icon"><i class="fab fa-steam"></i></div>
+                    <h3>Steam Login</h3>
+                    <p>Secure authentication</p>
+                </div>
+                <div class="step" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="step-icon"><i class="fas fa-exchange-alt"></i></div>
+                    <h3>Transfer</h3>
+                    <p>Seamless character move</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" class="donate-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Support Us</h2>
+            <div class="donate-options">
+                <div class="donate-card" data-aos="fade-right">
+                    <div class="card-content">
+                        <i class="fas fa-coffee"></i>
+                        <h3>Direct Support</h3>
+                        <p>Lowest fees · Instant support</p>
+                        <a href="https://buymeacoffee.com" class="donate-btn">Donate Now</a>
+                    </div>
+                </div>
+                <div class="donate-card" data-aos="fade-left">
+                    <div class="card-content">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Store</h3>
+                        <p>Multiple payment methods</p>
+                        <a href="https://tebex.io" class="donate-btn">Visit Store</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/aos.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+        function copyIP(ip) {
+            navigator.clipboard.writeText(ip);
+            alert('IP copied: ' + ip);
+        }
+    </script>
+</body>
+</html>

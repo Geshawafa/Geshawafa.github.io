@@ -1,0 +1,346 @@
+:root {
+    --cherry-pink: #ffb7c5;
+    --blossom-pink: #ff85a2;
+    --sakura-dark: #a83d5f;
+    --leaf-green: #8acb88;
+    --deep-blue: #102435;
+    --nav-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, var(--sakura-dark), var(--cherry-pink));
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: var(--nav-height);
+}
+
+/* Cherry Blossom Canvas */
+#blossomCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Cherry Swash', cursive;
+    color: var(--sakura-dark);
+}
+
+.logo img {
+    height: 40px;
+    animation: blossomSpin 8s linear infinite;
+}
+
+@keyframes blossomSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--sakura-dark);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--blossom-pink);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.discord-link {
+    background: #7289da;
+    color: white !important;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.discord-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(168, 61, 95, 0.5);
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px var(--cherry-pink); }
+    to { text-shadow: 0 0 30px var(--blossom-pink); }
+}
+
+/* Content Sections */
+.server-section,
+.guide-section,
+.donate-section {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 0;
+    background: rgba(16, 36, 53, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.server-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.server-card {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.server-card:hover {
+    transform: translateY(-10px);
+}
+
+.transfer-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.donate-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.donate-card {
+    background: var(--blossom-pink);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.donate-btn {
+    background: white;
+    color: var(--sakura-dark);
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .server-card {
+        padding: 1.5rem;
+    }
+}
+/* Add these new styles and update existing ones */
+
+/* Navigation Buttons */
+.nav-link {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--sakura-dark) !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    background: var(--blossom-pink);
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Server Card Fixes */
+.server-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: var(--sakura-dark);
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.server-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--blossom-pink);
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.server-card:hover::after {
+    opacity: 1;
+}
+
+.server-card h3 {
+    color: var(--sakura-dark);
+    margin-bottom: 1rem;
+}
+
+.server-card p {
+    color: var(--deep-blue);
+    font-weight: 500;
+}
+
+.server-card button {
+    background: var(--leaf-green);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.server-card button:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Menu Fix */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        padding: 1rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav-links.active {
+        transform: translateX(0);
+    }
+    
+    .nav-link {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Add this animation for card opening */
+@keyframes cardOpen {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.server-card {
+    animation: cardOpen 0.5s ease forwards;
+}
