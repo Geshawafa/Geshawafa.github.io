@@ -1,0 +1,25 @@
+/*______________________________________________________________________________________________________*/
+/* __________Default_Style_Fonts__________ */
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /* Light */
+    font-style: normal;
+    color: white;
+    font-size: 30px;
+}
+
+.jacquard-12-regular {
+    font-family: "Jacquard 12", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+  }
+  
+.tiny5-regular {
+    font-family: "Tiny5", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+}

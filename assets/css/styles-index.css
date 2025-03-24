@@ -1,0 +1,164 @@
+/* ______________________________ */
+
+
+/* styles-header.css */
+
+/* ______________________________ /*
+
+/* Zone de contenu principal */
+
+main {
+    display: flex; /* Utilisation de Flexbox */
+    flex-direction: column;
+    justify-content: space-between; /* Aligner au début */
+    gap: 15px;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 90px;
+
+}
+
+.up-container {
+    position: static;
+    display: block;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--container-bg-1);
+    color: var(--text-color-2);
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid var(--text-color-2); /* Ajout de la bordure avec la couleur et l'épaisseur */
+    box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.256);
+
+}
+#date {
+    font-family: "Tiny5";
+}
+#daily-message {
+    font-family: "Tiny5";
+    font-size: 36px;
+    margin: 20px;
+    font-weight: 700;
+}
+/* Zone de contenu (gauche + droite) */
+.content-container {
+    position: static;
+    display: flex;
+    width: 100%; /* Prend toute la largeur disponible */
+    margin: 0; /* Supprimer les marges supplémentaires */
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+
+}
+
+/* Zone de gauche */
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 30%; /* Zone plus étroite */
+    background-color: var(--container-bg-2);
+    padding-right: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: var(--text-color-1);
+}
+.left-sidebar h2 {
+    font-family: "Tiny5";
+    font-size: 30px;
+    text-align: center;
+    margin:10px;
+}
+.left-sidebar ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0px;    
+}
+.left-sidebar li {
+    margin-bottom: 10px;
+    
+}
+.left-sidebar a {
+    font-size: 18px;
+    text-decoration: none;
+    font-family: "Tiny5";
+    color: var(--text-color-1);
+    
+}
+/* Zone de droite */
+.right-container {
+    width: 70%; /* Zone plus large */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid var(--text-color-2); /* Ajout de la bordure avec la couleur et l'épaisseur */
+
+}
+.right-container h1 {
+    font-size: 30px;
+    text-align: center;
+    font-family: "Tiny5";
+    color: var(--text-color-2);
+    margin: 10px;
+}
+.right-container p {
+    margin: 10px;
+    font-family: Tiny5;
+    font-size: 16px;
+    color: var(--text-color-2);
+}
+
+@media (max-width: 570px) {
+
+    .up-container {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0px;
+        padding-top: 10px;
+        margin: 0px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrage */
+        justify-content: center;
+        width: 100%;
+        margin: 0; /* Enlève les marges parasites */
+        padding: 0;
+        box-shadow: var(--box-shadow);
+
+    }
+
+    .left-sidebar {
+        width: 100%; /* Pleine largeur */
+        max-width: 100vw; /* Ne dépasse pas la largeur de l'écran */
+        border-radius: 10px;
+        box-sizing: border-box; /* Évite que padding casse la largeur */
+        margin: 0px;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: var(--box-shadow);
+
+    }
+    .left-sidebar ul {
+        border-top: 1.5px solid var(--text-color-1);
+        padding: 10px;
+        text-align: center;
+    }
+
+
+    .right-container {
+        width: 100%; /* Pleine largeur */
+        max-width: 100vw; /* Ne dépasse pas la largeur de l'écran */
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: 2px solid var(--text-color-2); /* Ajout de la bordure avec la couleur et l'épaisseur */
+        margin: 0px;
+        padding: 10px;
+        box-shadow: var(--bax-shadow);
+
+    }
+
+}
